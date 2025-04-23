@@ -136,20 +136,6 @@ const NavBar = () => {
         Let's talk
       </Button>
     </Flex>
-
-    // <Box bg="teal.500" px={4} py={2} color="white">
-    //     <Flex gap={4}>
-    //     <Link as={NavLink} to="/" _hover={{ textDecoration: 'underline' }} _activeLink={{ fontWeight: 'bold' }}>
-    //         Home
-    //     </Link>
-    //     <Link as={NavLink} to="/about" _hover={{ textDecoration: 'underline' }} _activeLink={{ fontWeight: 'bold' }}>
-    //         About
-    //     </Link>
-    //     <Link as={NavLink} to="/contact" _hover={{ textDecoration: 'underline' }} _activeLink={{ fontWeight: 'bold' }}>
-    //         Contact
-    //     </Link>
-    //     </Flex>
-    // </Box>
   );
 };
 

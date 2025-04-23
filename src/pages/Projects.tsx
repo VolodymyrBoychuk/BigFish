@@ -9,21 +9,18 @@ const Projects = () => {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [autoChange, setAutoChange] = useState<boolean>(true);
 
-  // Контент для кожної "сторінки"
   const pages = [<PageOne />, <PageTwo />, <PageThree />];
 
-  // Використовуємо кастомний хук для автоматичної зміни сторінок
   useEffect(() => {
     const interval = setInterval(() => {
       if (autoChange) {
         setCurrentPage((prevPage) => (prevPage + 1) % pages.length);
       }
-    }, 3000); // кожні 3 секунди змінюється сторінка
+    }, 3000);
 
-    return () => clearInterval(interval); // Очищення інтервалу при демонтажі компонента
+    return () => clearInterval(interval);
   }, [autoChange]);
 
-  // Функція для зупинки автоматичного переходу
   const toggleAutoChange = () => {
     setAutoChange(false);
   };

@@ -48,9 +48,9 @@ const About = () => {
                   h="40px"
                   borderRadius="sm"
                   display="flex"
-                  alignItems="center" // по вертикалі
-                  justifyContent="flex-start" // по горизонталі
-                  pl={4} // відступ всередині зліва
+                  alignItems="center"
+                  justifyContent="flex-start"
+                  pl={4}
                 >
                   <Text fontWeight="bold" fontSize="xl" color="white">
                     We're a small,
@@ -63,8 +63,8 @@ const About = () => {
                   h="52px"
                   borderRadius="sm"
                   display="flex"
-                  alignItems="center" // по вертикалі
-                  justifyContent="left" // по горизонталі
+                  alignItems="center"
+                  justifyContent="left"
                   pl={4}
                 >
                   <Text fontWeight="bold" fontSize="4xl" color="white">
