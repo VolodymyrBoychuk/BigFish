@@ -95,7 +95,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <Box bg="#0c1650" minH="100vh" overflowX="hidden">
+      <Box bg="#0c1650" minH="100vh">
         <AnimatedRoutes />
       </Box>
     </Router>

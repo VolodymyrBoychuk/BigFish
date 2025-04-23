@@ -1,5 +1,6 @@
 // components/PageWrapper.js або .tsx
 import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 
 const pageVariants = {
   initial: {
@@ -22,7 +23,7 @@ const pageTransition = {
   duration: 0.6,
 };
 
-const PageWrapper = ({ children }) => (
+const PageWrapper = ({ children }: { children: ReactNode }) => (
   <motion.div
     initial="initial"
     animate="in"

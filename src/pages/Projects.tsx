@@ -30,18 +30,17 @@ const Projects = () => {
 
   return (
     <VStack spacing={4} width={'full'} height="100vh" bg="#0c1650">
-      {/* Використовуємо motion для анімації */}
-      <motion.div
-        key={currentPage} // Унікальний ключ для анімації
-        initial={{ opacity: 0 }} // Початкова невидимість
-        animate={{ opacity: 1 }} // Кінцеве значення (повна видимість)
-        exit={{ opacity: 0 }} // Коли сторінка залишає екран
-        transition={{ duration: 2 }} // Тривалість анімації
-      >
-        <Box shadow="md">{pages[currentPage]}</Box>
-      </motion.div>
-
-      {/* Кнопки для вибору конкретної сторінки */}
+      <Box overflow="hidden" position={'relative'} width="full" height="100%">
+        <motion.div
+          key={currentPage}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 2 }}
+        >
+          <Box shadow="md">{pages[currentPage]}</Box>
+        </motion.div>
+      </Box>
 
       <Button
         bg="#4a90e2"
