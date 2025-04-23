@@ -1,4 +1,4 @@
-import { Box, Container, Text, Image, Flex } from '@chakra-ui/react';
+import { Box, Container, Text, Image } from '@chakra-ui/react';
 
 import BlogImage from '../assets/Blog/Blogs.png';
 
