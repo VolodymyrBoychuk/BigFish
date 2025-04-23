@@ -1,5 +1,5 @@
 import { Box, Grid, Text, VStack } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 type Item = {
   id: number;
@@ -13,6 +13,19 @@ type TwoColumnListProps = {
 
 const TwoColumnList = ({ items }: TwoColumnListProps) => {
   const [selectedItem, setSelectedItem] = useState<Item | null>(items[0]);
+  const [textWidths, setTextWidths] = useState<{ [key: number]: number }>({});
+
+  const textRef = useRef<{ [key: number]: HTMLElement | null }>({});
+
+  useEffect(() => {
+    const newWidths: { [key: number]: number } = {};
+    items.forEach((item) => {
+      if (textRef.current[item.id]) {
+        newWidths[item.id] = textRef.current[item.id]!.offsetWidth;
+      }
+    });
+    setTextWidths(newWidths);
+  }, [items, selectedItem]);
 
   return (
     <Grid templateColumns={{ base: '1fr', md: '332px 411px' }} gap={12} alignItems="start">
@@ -25,19 +38,34 @@ const TwoColumnList = ({ items }: TwoColumnListProps) => {
               key={item.id}
               cursor="pointer"
               onClick={() => setSelectedItem(item)}
-              h={'50px'}
+              h="50px"
               w="332px"
               p={2}
-              alignContent={'center'}
-              textAlign={selectedItem?.id === item.id ? 'right' : 'left'}
+              overflow="hidden"
+              position="relative"
               fontWeight={selectedItem?.id === item.id ? 'bold' : 'normal'}
               bg={selectedItem?.id === item.id ? '#4A90E2' : 'transparent'}
             >
-              {item.title}
+              <Box
+                as="span"
+                ref={(el: any) => {
+                  textRef.current[item.id] = el;
+                }}
+                display="inline-block"
+                transition="transform 0.3s ease-in-out"
+                transform={
+                  selectedItem?.id === item.id
+                    ? `translateX(${318 - textWidths[item.id] || 0}px)`
+                    : 'translateX(0)'
+                }
+              >
+                {item.title}
+              </Box>
             </Text>
           ))}
         </VStack>
       </Box>
+
       {selectedItem ? (
         <>
           <Text fontSize="lg" color="whiteAlpha.800" lineHeight="1.8">
