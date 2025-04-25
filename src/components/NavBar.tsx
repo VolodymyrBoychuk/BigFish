@@ -15,8 +15,11 @@ const NavBar: React.FC = () => {
 
   return (
     <Flex
-      position="sticky"
+      position="fixed"
       top="0"
+      left="0"
+      right="0"
+      width={'100%'}
       zIndex="1000"
       bg="#0c1650"
       px="40px"

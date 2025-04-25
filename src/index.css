@@ -2,4 +2,6 @@ body {
   margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  padding-top: 60px;
+  --chakra-colors-chakra-body-bg: #0c1650;
 }
