@@ -1,23 +1,40 @@
-import { Box, Container, Text, Image, Grid, GridItem, VStack, HStack } from '@chakra-ui/react';
+import {
+  Box,
+  Container,
+  Text,
+  Image,
+  Grid,
+  GridItem,
+  VStack,
+  HStack,
+  Button,
+} from '@chakra-ui/react';
 
 import BlogImage from '../assets/Blog/Placeholder-Image.png';
 import space from '../assets/Blog/space.png';
 import hands from '../assets/Blog/hands.png';
 
 const Blog = () => {
+  const openSeparatePage = () => {
+    window.open('/separate', '_blank');
+  };
+
   return (
     <Box bg="#0c1650" h={'100vh'} overflow="hidden">
       <Container maxW="6xl" position="relative" py={{ base: 12, md: 20 }}>
         <Box position="relative" pl={6} zIndex={3}>
-          <Text
-            fontSize={{ base: '4xl', md: '6xl' }}
-            fontWeight="extrabold"
-            lineHeight="1.2"
-            textAlign="left"
-            color="white"
-          >
-            Blog
-          </Text>
+          <HStack justifyContent="space-between" width="100%" spacing={4} mb={4}>
+            <Text
+              fontSize={{ base: '4xl', md: '6xl' }}
+              fontWeight="extrabold"
+              lineHeight="1.2"
+              textAlign="left"
+              color="white"
+            >
+              Blog
+            </Text>
+            <Button onClick={openSeparatePage}>Read Blog</Button>
+          </HStack>
         </Box>
         <Grid templateColumns="1fr 1fr" gap={6} p={6}>
           {/* Ліва колонка */}

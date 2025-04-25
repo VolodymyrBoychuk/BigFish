@@ -9,9 +9,21 @@ import Technology from './pages/Technology';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Contacts from './pages/Contact';
+import SeparatePage from './pages/SeparatePage'; // імпортуй окрему сторінку
 import { Box } from '@chakra-ui/react';
 import PageWrapper from './components/PageWrapper';
 import TransitionOverlay from './components/TransitionOverlay';
+
+import { ReactNode } from 'react';
+
+const MainLayout = ({ children }: { children: ReactNode }) => (
+  <>
+    <Navbar />
+    <Box bg="#0c1650" minH="100vh">
+      {children}
+    </Box>
+  </>
+);
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -94,10 +106,18 @@ const AnimatedRoutes = () => {
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <Box bg="#0c1650" minH="100vh">
-        <AnimatedRoutes />
-      </Box>
+      <Routes>
+        <Route path="/separate" element={<SeparatePage />} />
+        {/* Route для окремої сторінки */}
+        <Route
+          path="*"
+          element={
+            <MainLayout>
+              <AnimatedRoutes />
+            </MainLayout>
+          }
+        />
+      </Routes>
     </Router>
   );
 };
