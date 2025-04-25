@@ -40,7 +40,7 @@ const TwoColumnList = ({ items }: TwoColumnListProps) => {
               onClick={() => setSelectedItem(item)}
               h="50px"
               w="332px"
-              p={2}
+              pt={3}
               overflow="hidden"
               position="relative"
               fontWeight={selectedItem?.id === item.id ? 'bold' : 'normal'}

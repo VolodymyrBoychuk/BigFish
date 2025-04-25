@@ -16,6 +16,9 @@ import {
 
 import envelope from '../assets/Contact/Icon/envelope.png';
 import tel from '../assets/Contact/Icon/icon.png';
+import facebook from '../assets/Contact/Icon/facebook.png';
+import instagram from '../assets/Contact/Icon/instagram.png';
+import twitter from '../assets/Contact/Icon/twitter.png';
 
 const Contacts = () => {
   return (
@@ -64,6 +67,13 @@ const Contacts = () => {
                 <Text fontSize="16" fontWeight="400" color="white">
                   +380 (93) 000-0000
                 </Text>
+              </HStack>
+            </Box>
+            <Box>
+              <HStack spacing={4} align="center">
+                <Image src={facebook} alt="Icon" boxSize="24px" position="relative" />
+                <Image src={instagram} alt="Icon" boxSize="24px" position="relative" />
+                <Image src={twitter} alt="Icon" boxSize="24px" position="relative" />
               </HStack>
             </Box>
           </Stack>

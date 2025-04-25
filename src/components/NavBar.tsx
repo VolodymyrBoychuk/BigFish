@@ -1,7 +1,18 @@
-import { NavLink } from 'react-router-dom';
-import { Button, Flex, HStack, Link, Text } from '@chakra-ui/react';
+import { Button, Flex, HStack, Text } from '@chakra-ui/react';
+import CustomNavLink from './CustomNavLink';
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
+  const links = [
+    { to: '/', label: 'Home' },
+    { to: '/what-we-do', label: 'What We Do' },
+    { to: '/about-us', label: 'About Us' },
+    { to: '/focus-areas', label: 'Focus Areas' },
+    { to: '/technology', label: 'Technology' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/blog', label: 'Blog' },
+    { to: '/contacts', label: 'Contacts' },
+  ];
+
   return (
     <Flex
       position="sticky"
@@ -23,103 +34,12 @@ const NavBar = () => {
         >
           Big Fish
         </Text>
-        <HStack spacing="36px" fontSize="15px" fontWeight="medium" color="#d7dde4">
-          <Link
-            opacity={0.8}
-            fontWeight={'medium'}
-            fontFamily={'Public_Sans-Medium'}
-            cursor="pointer"
-            _hover={{ opacity: 1 }}
-            as={NavLink}
-            to="/"
-            _activeLink={{ fontWeight: 'bold' }}
-          >
-            Home
-          </Link>
-          <Link
-            opacity={0.8}
-            fontWeight={'medium'}
-            fontFamily={'Public_Sans-Medium'}
-            cursor="pointer"
-            _hover={{ opacity: 1 }}
-            as={NavLink}
-            to="/what-we-do"
-            _activeLink={{ fontWeight: 'bold' }}
-          >
-            What We Do
-          </Link>
-          <Link
-            opacity={0.8}
-            fontWeight={'medium'}
-            fontFamily={'Public_Sans-Medium'}
-            cursor="pointer"
-            _hover={{ opacity: 1 }}
-            as={NavLink}
-            to="/about-us"
-            _activeLink={{ fontWeight: 'bold' }}
-          >
-            About Us
-          </Link>
-          <Link
-            opacity={0.8}
-            fontWeight={'medium'}
-            fontFamily={'Public_Sans-Medium'}
-            cursor="pointer"
-            _hover={{ opacity: 1 }}
-            as={NavLink}
-            to="/focus-areas"
-            _activeLink={{ fontWeight: 'bold' }}
-          >
-            Focus Areas
-          </Link>
-          <Link
-            opacity={0.8}
-            fontWeight={'medium'}
-            fontFamily={'Public_Sans-Medium'}
-            cursor="pointer"
-            _hover={{ opacity: 1 }}
-            as={NavLink}
-            to="/technology"
-            _activeLink={{ fontWeight: 'bold' }}
-          >
-            Technology
-          </Link>
-          <Link
-            opacity={0.8}
-            fontWeight={'medium'}
-            fontFamily={'Public_Sans-Medium'}
-            cursor="pointer"
-            _hover={{ opacity: 1 }}
-            as={NavLink}
-            to="/projects"
-            _activeLink={{ fontWeight: 'bold' }}
-          >
-            Projects
-          </Link>
-          <Link
-            opacity={0.8}
-            fontWeight={'medium'}
-            fontFamily={'Public_Sans-Medium'}
-            cursor="pointer"
-            _hover={{ opacity: 1 }}
-            as={NavLink}
-            to="/blog"
-            _activeLink={{ fontWeight: 'bold' }}
-          >
-            Blog
-          </Link>
-          <Link
-            opacity={0.8}
-            fontWeight={'medium'}
-            fontFamily={'Public_Sans-Medium'}
-            cursor="pointer"
-            _hover={{ opacity: 1 }}
-            as={NavLink}
-            to="/contacts"
-            _activeLink={{ fontWeight: 'bold' }}
-          >
-            Contacts
-          </Link>
+        <HStack spacing="36px" fontSize="15px" fontWeight="500">
+          {links.map(({ to, label }) => (
+            <CustomNavLink key={to} to={to}>
+              {label}
+            </CustomNavLink>
+          ))}
         </HStack>
       </HStack>
       <Button
