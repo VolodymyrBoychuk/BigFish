@@ -12,6 +12,16 @@ npm run dev
 
 npm run build
 
+## Start api server
+
+# first
+
+npm install -g json-server
+
+# next
+
+json-server --watch db.json --port 3000
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

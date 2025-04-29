@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "Why I Still Use UIKit in 2024 (And When SwiftUI Isn’t Enough)",
+      "text": "A practical breakdown of when UIKit still outperforms SwiftUI — from scroll performance to layout control — and how we blend both in real apps.",
+      "image": "http://localhost:5173/src/assets/Blog/Placeholder-Image.png",
+      "content": "# Markdown syntax guide\n\n## Headers\n\n# This is a Heading h1\n## This is a Heading h2\n###### This is a Heading h6\n\n## Emphasis\n\n*This text will be italic*  \n_This will also be italic_\n\n**This text will be bold**  \n__This will also be bold__\n_You **can** combine them_\n\n## Lists\n\n### Unordered\n\n* Item 1\n* Item 2\n* Item 2a\n* Item 2b\n    * Item 3a\n    * Item 3b\n\n### Ordered\n\n// 1. Item 1\n// 2. Item 2\n// 3. Item 3\n//     1. Item 3a\n//     2. Item 3b\n\n## Links\n[This is a link](https://www.google.com)\n\n## Blockquotes\n> This is a blockquote\n> This is a blockquote\n\n## Tables\n| Tables        | Are           | Cool  |\n| ------------- |:-------------:| -----:|\n| col 3 is      | right-aligned | \\$1600 |\n| col 2 is      | centered      |   \\$12 |\n| col 1 is      | left-aligned  |    \\$1 |"
+    },
+    {
+      "id": "2",
+      "title": "From Concept to App Store: How We Built CarpTracker with Combine + Realm",
+      "text": "An inside look at how we built a real-world SwiftUI/Combine app with offline-first storage, session analytics, and a hybrid UIKit system.",
+      "image": "http://localhost:5173/src/assets/Blog/space.png",
+      "content": "### Unordered\n\n* Item 1\n* Item 2\n* Item 2a\n* Item 2b\n    * Item 3a\n    * Item 3b\n\n## Block of code\n```swift\nclass Person {\n    var name: String\n    var age: Int\n\n    init(name: String, age: Int) {\n        self.name = name\n        self.age = age\n    }\n\n    func greet() {\n        print(\"Привіт, мене звати \\(name) і мені \\(age) років.\")\n    }\n}\n\nlet person = Person(name: \"Оля\", age: 25)\nperson.greet()\n```\n\n## Inline code\nThis is `inline code`\n\n## Images\n![This is an image](https://deutschvektor.com/images/blog/image_describe_b1.jpg \"Image Title\")\n![This is an image](https://deutschvektor.com/images/blog/image_describe_b1.jpg \"Image Title\")"
+    },
+    {
+      "id": "3",
+      "title": "Bridging UIKit + SwiftUI: Building a Reusable UICollectionView Component",
+      "text": "Tutorial + architecture notes on creating a reusable, high-performance",
+      "image": "http://localhost:5173/src/assets/Blog/hands.png",
+      "content": "Full content for bridging UI..."
+    },
+    {
+      "id": "4",
+      "title": "Why I Still Use UIKit in 2024 (And When SwiftUI Isn’t Enough)",
+      "text": "A practical breakdown of when UIKit still outperforms SwiftUI — from scroll performance to layout control — and how we blend both in real apps.",
+      "image": "http://localhost:5173/src/assets/Blog/Placeholder-Image.png",
+      "content": "# Markdown syntax guide\n\n## Headers\n\n# This is a Heading h1\n## This is a Heading h2\n###### This is a Heading h6\n\n## Emphasis\n\n*This text will be italic*  \n_This will also be italic_\n\n**This text will be bold**  \n__This will also be bold__\n_You **can** combine them_\n\n## Lists\n\n### Unordered\n\n* Item 1\n* Item 2\n* Item 2a\n* Item 2b\n    * Item 3a\n    * Item 3b\n\n### Ordered\n\n// 1. Item 1\n// 2. Item 2\n// 3. Item 3\n//     1. Item 3a\n//     2. Item 3b\n\n## Links\n[This is a link](https://www.google.com)\n\n## Blockquotes\n> This is a blockquote\n> This is a blockquote\n\n## Tables\n| Tables        | Are           | Cool  |\n| ------------- |:-------------:| -----:|\n| col 3 is      | right-aligned | \\$1600 |\n| col 2 is      | centered      |   \\$12 |\n| col 1 is      | left-aligned  |    \\$1 |"
+    },
+    {
+      "id": "5",
+      "title": "From Concept to App Store: How We Built CarpTracker with Combine + Realm",
+      "text": "An inside look at how we built a real-world SwiftUI/Combine app with offline-first storage, session analytics, and a hybrid UIKit system.",
+      "image": "http://localhost:5173/src/assets/Blog/space.png",
+      "content": "### Unordered\n\n* Item 1\n* Item 2\n* Item 2a\n* Item 2b\n    * Item 3a\n    * Item 3b\n\n## Block of code\n```swift\nclass Person {\n    var name: String\n    var age: Int\n\n    init(name: String, age: Int) {\n        self.name = name\n        self.age = age\n    }\n\n    func greet() {\n        print(\"Привіт, мене звати \\(name) і мені \\(age) років.\")\n    }\n}\n\nlet person = Person(name: \"Оля\", age: 25)\nperson.greet()\n```\n\n## Inline code\nThis is `inline code`\n\n## Images\n![This is an image](https://deutschvektor.com/images/blog/image_describe_b1.jpg \"Image Title\")\n![This is an image](https://deutschvektor.com/images/blog/image_describe_b1.jpg \"Image Title\")"
+    },
+    {
+      "id": "6",
+      "title": "Bridging UIKit + SwiftUI: Building a Reusable UICollectionView Component",
+      "text": "Tutorial + architecture notes on creating a reusable, high-performance",
+      "image": "http://localhost:5173/src/assets/Blog/hands.png",
+      "content": "Full content for bridging UI..."
+    },
+    {
+      "id": "7",
+      "title": "Why I Still Use UIKit in 2024 (And When SwiftUI Isn’t Enough)",
+      "text": "A practical breakdown of when UIKit still outperforms SwiftUI — from scroll performance to layout control — and how we blend both in real apps.",
+      "image": "http://localhost:5173/src/assets/Blog/Placeholder-Image.png",
+      "content": "# Markdown syntax guide\n\n## Headers\n\n# This is a Heading h1\n## This is a Heading h2\n###### This is a Heading h6\n\n## Emphasis\n\n*This text will be italic*  \n_This will also be italic_\n\n**This text will be bold**  \n__This will also be bold__\n_You **can** combine them_\n\n## Lists\n\n### Unordered\n\n* Item 1\n* Item 2\n* Item 2a\n* Item 2b\n    * Item 3a\n    * Item 3b\n\n### Ordered\n\n// 1. Item 1\n// 2. Item 2\n// 3. Item 3\n//     1. Item 3a\n//     2. Item 3b\n\n## Links\n[This is a link](https://www.google.com)\n\n## Blockquotes\n> This is a blockquote\n> This is a blockquote\n\n## Tables\n| Tables        | Are           | Cool  |\n| ------------- |:-------------:| -----:|\n| col 3 is      | right-aligned | \\$1600 |\n| col 2 is      | centered      |   \\$12 |\n| col 1 is      | left-aligned  |    \\$1 |"
+    },
+    {
+      "id": "8",
+      "title": "From Concept to App Store: How We Built CarpTracker with Combine + Realm",
+      "text": "An inside look at how we built a real-world SwiftUI/Combine app with offline-first storage, session analytics, and a hybrid UIKit system.",
+      "image": "http://localhost:5173/src/assets/Blog/space.png",
+      "content": "### Unordered\n\n* Item 1\n* Item 2\n* Item 2a\n* Item 2b\n    * Item 3a\n    * Item 3b\n\n## Block of code\n```swift\nclass Person {\n    var name: String\n    var age: Int\n\n    init(name: String, age: Int) {\n        self.name = name\n        self.age = age\n    }\n\n    func greet() {\n        print(\"Привіт, мене звати \\(name) і мені \\(age) років.\")\n    }\n}\n\nlet person = Person(name: \"Оля\", age: 25)\nperson.greet()\n```\n\n## Inline code\nThis is `inline code`\n\n## Images\n![This is an image](https://deutschvektor.com/images/blog/image_describe_b1.jpg \"Image Title\")\n![This is an image](https://deutschvektor.com/images/blog/image_describe_b1.jpg \"Image Title\")"
+    }
+  ]
+}

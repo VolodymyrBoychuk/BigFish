@@ -15,6 +15,7 @@ import PageWrapper from './components/PageWrapper';
 import TransitionOverlay from './components/TransitionOverlay';
 
 import { ReactNode } from 'react';
+import { DataProvider } from './hooks/DataContext';
 
 const MainLayout = ({ children }: { children: ReactNode }) => (
   <>
@@ -107,7 +108,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/separate" element={<SeparatePage />} />
+        <Route path="/separate/:id" element={<SeparatePage />} />
+
         {/* Route для окремої сторінки */}
         <Route
           path="*"
