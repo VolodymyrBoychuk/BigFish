@@ -14,13 +14,15 @@ import { usePagination } from '../hooks/usePagination';
 
 import { BlogPost } from '../blogType';
 import { useFetchBlogs } from '../hooks/useFetchBlogs';
+import { useNavigate } from 'react-router-dom';
 
 const Blog = () => {
   const { data, loading, error } = useFetchBlogs('items');
   const { currentItems, page, totalPages, nextPage, prevPage, goToPage } = usePagination(data, 3);
+  const navigate = useNavigate();
 
   const openSeparatePage = (item: BlogPost | null) => {
-    window.open(`/separate/${item?.id}`, '_blank');
+    navigate(`/separate/${item?.id}`);
   };
 
   if (loading) return <p>Loading...</p>;
